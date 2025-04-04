@@ -1,0 +1,21 @@
+Package lexing ;
+
+Helpers
+num = ['0'..'9']+; 
+letter = ['a'..'z'] | ['A'..'Z'] ; 
+
+Tokens
+num = num;
+keywords = 'while' | 'do' | 'for' |'if' | 'else' | 'else if' | 'switch' | 'case' | 'break' | 'continue' | 'default' | 'int' | 'float' | 'char' | 'double' | 'bool' | 'printf' | '"%d\n"' | '"%f\n"' | '"%c\n"' | '"%lf\n"' | 'const' ; 
+float_num = num '.' num;
+char_const = '"' letter '"' ; 
+str_const = '"' (letter |' ' | num | '.')* '"'; 
+ident = letter (letter | num | '_')* ;
+assign = '=' ;
+arith_op = '+' | '-' | '*' | '/' | '++' | '--' | '%';
+rel_op = ['<' + '>'] | '==' | '<=' | '>=' | '!=' ; 
+log_op = '&&' | '||' | '!' ;
+spec_char = '.' | ',' | ';' | '{' | '}' | '?' ;
+paren = ['(' + ')']; 
+blank = (' ' | '\t' | 10 | '\n')+ ; 
+unknown = [0..0xffff] ;
