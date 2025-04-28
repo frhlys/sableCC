@@ -6,7 +6,7 @@ letter = ['a'..'z'] | ['A'..'Z'] ;
 
 Tokens
 num = num;
-keywords = 'while' | 'do' | 'for' |'if' | 'else' | 'else if' | 'switch' | 'case' | 'break' | 'continue' | 'default' | 'int' | 'float' | 'char' | 'double' | 'bool' | 'printf' | '"%d\n"' | '"%f\n"' | '"%c\n"' | '"%lf\n"' | 'const' ; 
+keywords = 'while' | 'do' | 'for' |'if' | 'else' | 'else if' | 'switch' | 'case' | 'break' | 'continue' | 'default' | 'int' | 'float' | 'char' | 'double' | 'bool' | 'printf' | '"%d\n"' | '"%f\n"' | '"%c\n"' | '"%lf\n"' | 'const' |'what' | 'else' | 'if' |'not'|; 
 float_num = num '.' num;
 char_const = '"' letter '"' ; 
 str_const = '"' (letter |' ' | num | '.')* '"'; 
