@@ -48,6 +48,8 @@ class Lexing
 					// Ignore white space
 				else if (token instanceof TUnknown)
 					System.out.print ("Unknown :  ");
+				else if(token instanceof Tdot)
+					System.out.print(" Dot: ");
 
 				if (! (token instanceof TBlank))
 					System.out.println (token);
